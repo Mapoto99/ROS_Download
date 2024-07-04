@@ -30,3 +30,40 @@ sudo apt install ros-noetic-desktop-full
 echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 ```
+
+## Downloading ROS foxy:
+
+click on this [LINK](https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html)
+Open the terminal on Ubuntu, then type the following respectively:
+1-
+```
+sudo apt install software-properties-common
+```
+2-
+```
+sudo add-apt-repository universe
+```
+3-
+```
+sudo apt update && sudo apt install curl -y
+```
+4-
+```
+sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+```
+5-
+```
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+```
+6-
+```
+sudo apt update
+```
+7-
+```
+sudo apt install ros-foxy-desktop python3-argcomplete
+```
+8-
+```
+sudo apt install ros-dev-tools
+```
